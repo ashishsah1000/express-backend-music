@@ -1,0 +1,12 @@
+.board{
+    height: 400px;
+    width: 95%;
+    color:white;
+    border-radius: 10px;
+    margin:0px auto;
+    margin-left: 57px;
+    background: url("https://loremflickr.com/1720/440/dog");
+    background-size: cover;
+    margin-top: -100px;
+    overflow: hidden;
+}
