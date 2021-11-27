@@ -1,3 +1,22 @@
 .container{
     padding: 40px 40px;
 }
+.selectAction{
+    padding: 10px 10px;
+    background: rgba(222, 222, 222, 0);
+    border: 1px solid rgb(3, 128, 34);
+    color: darkslategrey;
+    font-size: 16px;
+    outline:none;
+}
+.selectAction option{
+    padding: 10px 10px;
+}
+.submitBtn{
+    margin-top: 20px;
+    width: 100%;
+}
+.addElement{
+    position: absolute;
+    right: 10px;
+}
