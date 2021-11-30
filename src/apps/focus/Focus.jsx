@@ -1,16 +1,21 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import "./focus.css"
 import { Button, FormControl, TextField, Typography,Radio, RadioGroup,FormControlLabel } from '@material-ui/core'
 import AddCircle from '@material-ui/icons/AddCircle'
 import { Box } from '@mui/material';
-import { Grid } from '@material-ui/core';
-import { purple } from '@mui/material/colors';
-import { typography } from '@mui/system';
+
 import { useState } from 'react';
 
 export default function Focus() {
     const [actionType, setActionType] = React.useState('Study');
     const [AddElement, setAddElement] = useState(false)
+    const [Title, setTitle] = useState("");
+    const [Details, setDetails] = useState("");
+    const [Type, setType] = useState("");
+    const [Level, setLevel] = useState("");
+    const getFormData = ()=>{
+        console.log(Title+" "+Details+" "+Type+" "+Level)
+    }
     const actionTypes = [
         {
             value: "Study",
@@ -48,16 +53,16 @@ export default function Focus() {
             {AddElement?<div className="addElement">
                 <Box component="form" sx={{ width: 300, display: 'flex', flexWrap: 'wrap', backgroundColor: "rgba(222,222,222,.8)", padding: "20px 20px", borderRadius: 2 }} noValidate
                     autoComplete="off" >
-                    <Typography variant="h4" style={{ color: "rgba(22,22,22,.8)" }}>
+                    <Typography onChange={(e)=>console.log(e.target.value)} value={Title} variant="h4" style={{ color: "rgba(22,22,22,.8)" }}>
                         Add your work
                     </Typography>
                     <br />
                     <FormControl>
-                        <TextField label="Job Name" variant="outlined" style={{ width: "250px" }} />
+                        <TextField label="Job Name" variant="outlined" style={{ width: "250px" }} onChange={(e)=>{setTitle(e.target.value)}} />
                         <br />
-                        <TextField variant="outlined" label="Extra Details" />
+                        <TextField variant="outlined" label="Extra Details" onChange={(e)=>{setDetails(e.target.value)}} />
                         <br />
-                        <select className="selectAction">
+                        <select className="selectAction" onChange={(e)=>{setType(e.target.value)}} >
                             {actionTypes.map((x) => {
                                 return (
                                     <option value={x.value}>{x.lable}</option>
@@ -68,14 +73,15 @@ export default function Focus() {
                             aria-label="gender"
                             defaultValue="female"
                             name="radio-buttons-group"
+                            onChange={(e)=>{setLevel(e.target.value)}}
                         >
-                            <Typography variant="p">How much you want to priotize this job?</Typography>
+                            <Typography variant="h6">How much you want to priotize this job?</Typography>
                             <FormControlLabel value="high" control={<Radio size="small" color="secondary" />} label="High" />
                             <FormControlLabel value="moderate" control={<Radio size="small" color="primary"  />} label="Moderate" />
-                            <FormControlLabel value="low" control={<Radio size="small" color="success"  />} label="Low" />
+                            <FormControlLabel value="low" control={<Radio size="small" color="default"  />} label="Low" />
                         </RadioGroup>
                         <div className="submitBtn">
-                            <Button variant="contained" color="primary" className="submitBtn">Add the job</Button>
+                            <Button onClick={getFormData} variant="contained" color="primary" className="submitBtn">Add the job</Button>
 
                         </div>
 
