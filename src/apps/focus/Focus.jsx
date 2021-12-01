@@ -14,7 +14,21 @@ export default function Focus() {
     const [Type, setType] = useState("");
     const [Level, setLevel] = useState("");
     const getFormData = ()=>{
-        console.log(Title+" "+Details+" "+Type+" "+Level)
+        console.log(Title+" "+Details+" "+Type+" "+Level);
+        //  learn about cors
+        var sendData = {
+            "title" : Title,
+            "details":Details,
+            "level":Level,
+            "type":Type
+        }
+
+        fetch("http://localhost:3000/a/focus/create/",{
+            method : 'POST',
+            headers: { "content-type": "application/json" },
+            body:JSON.stringify(sendData)
+        }).catch((err)=>console.log(err));
+
     }
     const actionTypes = [
         {
