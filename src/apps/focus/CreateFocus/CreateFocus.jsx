@@ -59,7 +59,7 @@ export default function CreateFocus() {
 
 
     return (
-        <div>
+        <div className="createFocus">
             <Box component="form" sx={{ width: 300, display: 'flex', flexWrap: 'wrap', backgroundColor: "rgba(222,222,222,.8)", padding: "20px 20px", borderRadius: 2 }} noValidate
                 autoComplete="off" >
                 <Typography onChange={(e) => console.log(e.target.value)} value={Title} variant="h4" style={{ color: "rgba(22,22,22,.8)" }}>

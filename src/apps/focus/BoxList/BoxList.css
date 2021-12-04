@@ -1,0 +1,9 @@
+.ListBox{
+    background: rgb(230, 165, 27);
+    height: 300px;
+    width: 300px;
+    border-radius: 7px;
+    margin: 10px 10px;
+    padding: 20px 20px;
+    overflow: hidden;
+}

@@ -4,7 +4,8 @@ import { Button, FormControl, TextField, Typography,Radio, RadioGroup,FormContro
 import AddCircle from '@material-ui/icons/AddCircle'
 import { Box } from '@mui/material';
 import CreateFocus from './CreateFocus/CreateFocus';
-
+import BoxList from './BoxList/BoxList';
+import FocusList from './FocusList/FocusList';
 import { useState } from 'react';
 
 export default function Focus() {
@@ -21,8 +22,14 @@ export default function Focus() {
             <Button variant="contained" onClick={showAddElement} color={!AddElement?"primary":"secondary"}>
                 {!AddElement?"Add New Item":"Close add element"} &nbsp;<AddCircle />
             </Button>
-            {AddElement?<div className="addElement">
+            <div className="focusItems">
+                <FocusList />
+            </div>
+            <BoxList />
+            
+            {AddElement?<div>
                 <CreateFocus />    
+                
 
             </div>:<div></div>}
             
