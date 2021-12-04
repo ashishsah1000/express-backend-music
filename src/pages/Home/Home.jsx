@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomCard from '../../components/logical/CustomCard'
+import CustomCard from '../../components/logical/cards/CustomCard'
 import MainBoard from '../../components/structure/mainBoard/MainBoard'
 
 export default function Home() {

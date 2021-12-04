@@ -29,9 +29,9 @@ const ExpandMore = styled((props) => {
   }),
 }));
 export default function CustomCard() {
- 
-    return (
-      <Card sx={{ maxWidth: 345 }}>
+
+  return (
+    <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -65,19 +65,19 @@ export default function CustomCard() {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        
+
         <div className="arrow">
-        <Link to="/a/focus">
-        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-        <NavigateNext />
-          </Avatar>
+          <Link to="/a/focus">
+            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+              <NavigateNext />
+            </Avatar>
           </Link>
-          
+
         </div>
 
-        
-        
+
+
       </CardActions>
-      </Card>
-    )
+    </Card>
+  )
 }
