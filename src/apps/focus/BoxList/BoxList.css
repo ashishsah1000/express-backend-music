@@ -1,9 +1,12 @@
 .ListBox{
-    background: rgb(230, 165, 27);
+    /* background: rgb(230, 165, 27) */
     height: 300px;
     width: 300px;
     border-radius: 7px;
     margin: 10px 10px;
     padding: 20px 20px;
     overflow: hidden;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }

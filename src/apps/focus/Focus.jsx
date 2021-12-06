@@ -25,8 +25,6 @@ export default function Focus() {
             <div className="focusItems">
                 <FocusList />
             </div>
-            <BoxList />
-            
             {AddElement?<div>
                 <CreateFocus />    
                 

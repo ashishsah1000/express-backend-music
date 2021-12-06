@@ -1,7 +1,16 @@
 .focusList{
     padding: 40px 40px;
     color: wheat;
+  
+
 }
+.listContainer{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+/*  for the loading button */
 .lds-roller {
     display: inline-block;
     position: relative;
@@ -86,3 +95,4 @@
       transform: rotate(360deg);
     }
   }
+  /* end of floading animation */
